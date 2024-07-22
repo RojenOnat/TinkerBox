@@ -10,6 +10,8 @@ public class TableSuccesProcces : MonoBehaviour
     private TableTextHolder _tableTextHolder;
     private TableBotHolder _tableBotHolder;
     private TableCapaticyHolder _tableCapaticyHolder;
+
+    public ParticleSystem TableCompletedPart;
     private void Start()
     {
         _tableTextHolder = GetComponent<TableTextHolder>();
@@ -25,6 +27,7 @@ public class TableSuccesProcces : MonoBehaviour
             _tableBotHolder.ClearTable();
             _tableTextHolder.RegenerateValue();
             _tableCapaticyHolder.SetTableBoolState(true);
+            TableCompletedPart.Play();
         });
 
     }

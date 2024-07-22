@@ -53,7 +53,7 @@ public class ChairSetter : MonoBehaviour
         
         if (sum != total)
         {
-            Debug.LogError("Burda patladı" + total);
+            //Debug.LogError("Burda patladı" + total);
             CreateNumber();
         } else
         {

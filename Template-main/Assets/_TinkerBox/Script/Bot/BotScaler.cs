@@ -21,7 +21,7 @@ public class BotScaler : MonoBehaviour
         if(!_canChange) return;
         _canChange = false;
         
-        transform.DOScale(.75f, 0.1f).SetEase(Ease.Linear)
+        transform.DOScale(.65f, 0.1f).SetEase(Ease.Linear)
             .OnComplete(OnScaleFlashCompleted);
     }
     
@@ -30,7 +30,7 @@ public class BotScaler : MonoBehaviour
         if(!_canChange) return;
         _canChange = false;
         
-        transform.DOScale(.85f, 0.1f).SetEase(Ease.OutBack)
+        transform.DOScale(.7f, 0.1f).SetEase(Ease.OutBack)
             .OnComplete(OnScaleFlashCompleted);
     }
     

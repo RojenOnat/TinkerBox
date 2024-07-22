@@ -18,7 +18,7 @@ Material:
   - _CELPRIMARYMODE_SINGLE
   - _UNITYSHADOWMODE_MULTIPLY
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -117,7 +117,7 @@ Material:
     - _OverrideShadowsEnabled: 1
     - _Parallax: 0.02
     - _RampSmooth: 1
-    - _RampThreshold: 0.67
+    - _RampThreshold: 0.68
     - _RimEnabled: 0
     - _SecondaryColor: 1
     - _SecondaryColorEnabled: 1
@@ -138,7 +138,7 @@ Material:
     - _UnityShadowSharpness: 1
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.41117835, g: 0.5283019, b: 0.42645535, a: 1}
+    - _Color: {r: 0.7169812, g: 0.54513514, b: 0.091313645, a: 1}
     - _ColorCelShadow: {r: 0.7735849, g: 0.59187806, b: 0.4488252, a: 1}
     - _ColorDim: {r: 0.29436633, g: 0.46226418, b: 0.3529973, a: 0.85}
     - _ColorDimCurve: {r: 0.85, g: 0.85, b: 0.85, a: 0.85}

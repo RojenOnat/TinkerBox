@@ -18,7 +18,7 @@ public class RayManager : MonoBehaviour
     private BotColorChanger _botColorChanger;
 
     public GameObject TargetT;
-
+    public FeedbackManager FManager;
     public GameObject Ray()
     {
         GameObject hitted = null;
@@ -58,7 +58,7 @@ public class RayManager : MonoBehaviour
             if (TableControl())
             {
                 //Debug.Log("Bot Can Sit!!");
-                
+                FManager.OnSellectionVibrate();
                 BListBase.BotList.Remove(_currentBot);
                 _botAIDestinationSetter.target = InstTargetPoint().transform;
                 _tableTextHolder.SetCurrentHoldedValue(_currentBot.GetComponent<BotTextHolder>().HoldedValue);

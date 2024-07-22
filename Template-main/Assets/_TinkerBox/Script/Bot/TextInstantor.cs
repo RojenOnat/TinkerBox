@@ -11,11 +11,12 @@ public class TextInstantor : MonoBehaviour
     public List<GameObject> HoldedTextList;
 
     public GameObject TableObject;
+    private FeedbackManager _fm;
     private void Start()
     {
         _botTextHolder = GetComponent<BotTextHolder>();
-        
-       
+        _fm = FindObjectOfType<FeedbackManager>();
+
     }
 
     public void AddTableListThisBot()
@@ -50,6 +51,7 @@ public class TextInstantor : MonoBehaviour
                 TableObject.GetComponent<TableTextHolder>().DecreaseHoldedValue(1);
                 _botTextHolder.DecreaseHoldedText(1);
                 TableObject.GetComponent<TableScaler>().ScaleFlash();
+                _fm.OnLightVibrate();
             });
             
 
