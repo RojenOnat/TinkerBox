@@ -123,7 +123,7 @@ public class ChairSetter : MonoBehaviour
         {
             for (int i = 0; i < ChairCount; i++)
             {
-                ChairList[i].transform.DOLocalMoveY(1f, 0.1f).SetEase(Ease.Linear).SetLoops(2, LoopType.Yoyo)
+                ChairList[i].transform.DOLocalMoveY(1.75f, 0.1f).SetEase(Ease.Linear).SetLoops(2, LoopType.Yoyo)
                     .SetDelay(i * 0.05f);
             }
         });

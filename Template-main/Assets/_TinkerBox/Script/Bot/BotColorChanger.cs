@@ -7,7 +7,7 @@ public class BotColorChanger : MonoBehaviour
 {
     public SkinnedMeshRenderer SMR;
     private bool _canChange = true;
-    
+    private bool _changed = false;
     public void RedFlash()
     {
         if(!_canChange) return;
@@ -19,7 +19,9 @@ public class BotColorChanger : MonoBehaviour
 
     public void SetColor(Color c)
     {
+        if(_changed) return;
         SMR.material.DOColor(c, 0.1f).SetEase(Ease.Linear);
+        _changed = true;
     }
 
     private void OnColorFlashEnd()

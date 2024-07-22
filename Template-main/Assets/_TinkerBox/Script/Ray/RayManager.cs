@@ -27,7 +27,7 @@ public class RayManager : MonoBehaviour
         
         if (Physics.Raycast(ray, out RaycastHit hit,25f,NeededMask))
         {
-            hitted = hit.collider.gameObject;
+            hitted = hit.collider.transform.parent.gameObject;
             SetTempTableCalculator(hitted.GetComponent<TableCalculator>());
             SetChairSetter(hitted.GetComponent<ChairSetter>());
             SetTableTextHolder(hitted.GetComponent<TableTextHolder>());

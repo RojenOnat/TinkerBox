@@ -12,11 +12,13 @@ public class TableSuccesProcces : MonoBehaviour
     private TableCapaticyHolder _tableCapaticyHolder;
 
     public ParticleSystem TableCompletedPart;
+    private FeedbackManager _fm;
     private void Start()
     {
         _tableTextHolder = GetComponent<TableTextHolder>();
         _tableBotHolder = GetComponent<TableBotHolder>();
         _tableCapaticyHolder= GetComponent<TableCapaticyHolder>();
+        _fm = FindObjectOfType<FeedbackManager>();
     }
 
     public void OnSucces()
@@ -28,6 +30,7 @@ public class TableSuccesProcces : MonoBehaviour
             _tableTextHolder.RegenerateValue();
             _tableCapaticyHolder.SetTableBoolState(true);
             TableCompletedPart.Play();
+            _fm.OnRigidVibrate();
         });
 
     }

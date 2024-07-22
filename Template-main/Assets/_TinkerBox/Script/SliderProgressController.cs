@@ -30,7 +30,7 @@ public class SliderProgressController : MonoBehaviour
     {
         Debug.LogError(value);
         currentSliderValue += ((float)value / LevelGoal);
-        Debug.LogError(currentSliderValue);
+        //Debug.LogError(currentSliderValue);
 
         SliderImage.DOFillAmount(currentSliderValue, 0.1f).SetEase(Ease.Linear).OnUpdate(() =>
         {

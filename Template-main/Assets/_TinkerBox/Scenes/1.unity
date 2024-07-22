@@ -2054,7 +2054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NeededMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1024
   BListBase: {fileID: 1876185098}
   TargetT: {fileID: 471306661}
   FManager: {fileID: 1004087215}

@@ -2151,7 +2151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NeededMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1024
   BListBase: {fileID: 1876185098}
   TargetT: {fileID: 471306661}
   FManager: {fileID: 1004087215}
@@ -3383,7 +3383,7 @@ MonoBehaviour:
           TargetBPM: 120
         Owner: {fileID: 1780612718}
         DebugActive: 0
-        Preset: 7
+        Preset: 6
         HapticSettings:
           ForceGamepadID: 0
           GamepadID: 0
@@ -3626,7 +3626,7 @@ MonoBehaviour:
           TargetBPM: 120
         Owner: {fileID: 1822251337}
         DebugActive: 0
-        Preset: 4
+        Preset: 7
         HapticSettings:
           ForceGamepadID: 0
           GamepadID: 0

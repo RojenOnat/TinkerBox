@@ -1978,6 +1978,10 @@ PrefabInstance:
       propertyPath: ChairList.Array.data[4]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4808904661732602144, guid: aaf392c1a58a344b0bcd61d4ad108af8, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5211086940158783550, guid: aaf392c1a58a344b0bcd61d4ad108af8, type: 3}
       propertyPath: m_Name
       value: Table_Parent (3)
@@ -2151,7 +2155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NeededMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1024
   BListBase: {fileID: 1876185098}
   TargetT: {fileID: 471306661}
   FManager: {fileID: 1004087215}
