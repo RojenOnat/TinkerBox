@@ -44,6 +44,12 @@ public class SliderProgressController : MonoBehaviour
         return PlayerPrefs.GetInt("_savedLevelKey")+1;
     }
 
+    private void RaiseSavedLevel()
+    {
+        var a = GetSavedLevel();
+        PlayerPrefs.SetInt("_savedLevelKey",a);
+    }
+
     private void SetLevelText()
     {
         LevelTMP.text = "Level" + " " + GetSavedLevel().ToString("0");
@@ -55,8 +61,10 @@ public class SliderProgressController : MonoBehaviour
         if (a >= LevelGoal )
         {
             Debug.LogError("LEVEL UP PANEL ACTİVE");
+            RaiseSavedLevel();
             ControllerCanvas.SuccesPanelActive();
         }
+
     }
     
    

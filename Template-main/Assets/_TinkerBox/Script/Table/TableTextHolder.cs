@@ -14,7 +14,7 @@ public class TableTextHolder : TextBase
     /// </summary>
     public int HoldedValue;
 
-    private int _holdedPoint;
+    public int _holdedPoint { get; set; }
     public int CurrentHoldedValue;
     private ChairSetter _chairSetter;
     [Tooltip("Text mesh pro component")]

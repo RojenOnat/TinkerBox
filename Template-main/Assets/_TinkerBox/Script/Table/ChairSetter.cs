@@ -38,9 +38,22 @@ public class ChairSetter : MonoBehaviour
         {
             sum+=t[i];
         }
-        
-        if (sum != _tableTextHolder.HoldedValue)
+
+        var total = 0;
+
+        if (_tableTextHolder._holdedPoint == 0)
         {
+            total = _tableTextHolder.HoldedValue;
+        }
+        else
+        {
+            total = _tableTextHolder._holdedPoint;
+        }
+        
+        
+        if (sum != total)
+        {
+            Debug.LogError("Burda patladı" + total);
             CreateNumber();
         } else
         {
