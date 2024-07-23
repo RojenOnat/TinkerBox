@@ -26,15 +26,15 @@ public class ChairSetter : MonoBehaviour
     public void CreateNumber()
     {
         List<int> t = new List<int>();
-        
-        for (int i = 0; i < ChairList.Count; i++)
+        var a = Random.Range(1, ChairList.Count);
+        for (int i = 0; i < a; i++)
         {
             t.Add(Random.Range(1, 10));
         }
         
         var sum = 0;
 
-        for (int i = 0; i < ChairList.Count; i++)
+        for (int i = 0; i < a; i++)
         {
             sum+=t[i];
         }
@@ -57,10 +57,10 @@ public class ChairSetter : MonoBehaviour
             CreateNumber();
         } else
         {
-            t.Add(Random.Range(1,6));
+            t.Add(Random.Range(1,10));
             t = ShuffleList(t);
          
-            for (int i = 0; i < ChairList.Count+1; i++)
+            for (int i = 0; i < a+1; i++)
             {
                 _randomValueHolder.RandomValues.Add(t[i]);
             }
@@ -85,6 +85,14 @@ public class ChairSetter : MonoBehaviour
     {
         ControlChairList();
         ChairInstantiator();
+        GetComponent<TableCapaticyHolder>().TableCapacityList.Clear();
+
+        for (int i = 0; i < ChairList.Count; i++)
+        {
+            GetComponent<TableCapaticyHolder>().TableCapacityList.Add(false);
+        }
+        //GetComponent<TableCapaticyHolder>().TableCapacityList = new List<bool>(ChairList.Count);
+
     }
 
 

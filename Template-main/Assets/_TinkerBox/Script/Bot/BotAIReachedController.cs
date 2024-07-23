@@ -34,13 +34,20 @@ public class BotAIReachedController : MonoBehaviour
             //Destroy(GetComponent<AIPath>());
             if (!IsClearState)
             {
+                var t = GetComponent<TextInstantor>().TableObject;
+                Vector3 dir = t.transform.position - transform.position;
+                Quaternion lookRot = Quaternion.LookRotation(dir);
+                lookRot.x = 0; lookRot.z = 0;
+                transform.rotation = lookRot;
+                
+                
                 _botAIDestinationSetter.target = null;
                 if(!IsClearState)EndOfPlayerPath.Invoke();
                 Debug.Log("A* Movemend Ending!");
                 _botAnimatorController.SetWalkState(false);
                // transform.position = _botAIDestinationSetter.target.position;
              //  GetComponent<AIPath>().Teleport(  _botAIDestinationSetter.target.position,true);
-
+            
             }
             else
             {

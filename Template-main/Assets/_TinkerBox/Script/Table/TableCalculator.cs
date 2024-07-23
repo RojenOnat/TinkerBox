@@ -18,7 +18,7 @@ public class TableCalculator : MonoBehaviour
     private void Update()
     {
 
-        TableFalseMatchControl();
+        //TableFalseMatchControl();
     }
 
     public void TableFalseMatchControl()
@@ -49,7 +49,7 @@ public class TableCalculator : MonoBehaviour
     public bool BotCanSit(int botHoldedValue)
     {
         //Debug.LogError(_tableCapaticyHolder.IsLastChair());
-        if (_tableCapaticyHolder.IsLastChair())
+       /* if (_tableCapaticyHolder.IsLastChair())
         {
             if (botHoldedValue != _tableTextHolder.CurrentHoldedValue)
             {
@@ -69,8 +69,10 @@ public class TableCalculator : MonoBehaviour
         {
             //Debug.LogError("SON SANDALYE DEGİL.");
             if (botHoldedValue < _tableTextHolder.CurrentHoldedValue) return true;
-        }
+        }*/
 
+       if (botHoldedValue <= _tableTextHolder.CurrentHoldedValue) return true;
+       
         return false;
     }
 }
