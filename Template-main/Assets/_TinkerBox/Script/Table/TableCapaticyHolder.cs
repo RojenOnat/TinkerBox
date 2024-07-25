@@ -22,7 +22,7 @@ public class TableCapaticyHolder : MonoBehaviour
 
         return a;
     }
-    /*public bool IsLastChair()
+    public bool IsLastChair()
     {
         if (TableCapacityList[^2])
         {
@@ -31,7 +31,7 @@ public class TableCapaticyHolder : MonoBehaviour
         }
         
         return false;
-    }*/
+    }
 
     public void SetTableBoolState(int index, bool status)
     {

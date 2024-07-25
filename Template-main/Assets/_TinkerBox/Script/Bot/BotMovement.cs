@@ -12,6 +12,17 @@ public class BotMovement : MonoBehaviour
    private BotAnimatorController _botAnimatorController;
    
    private BotListBase _botListBase;
+   private BotColorChanger _botColorChanger;
+   private BotScaler _botScaler;
+   private BotTextHolder _botTextHolder;
+
+   private void Start()
+   {
+      _botTextHolder = GetComponent<BotTextHolder>();
+      _botScaler = GetComponent<BotScaler>();
+      _botColorChanger = GetComponent<BotColorChanger>();
+   }
+
    private void Awake()
    {
       _botAnimatorController = GetComponent<BotAnimatorController>();
@@ -38,13 +49,13 @@ public class BotMovement : MonoBehaviour
 
       if (_botListBase.BotList[0].gameObject == gameObject)
       {
-         GetComponent<BotColorChanger>().SetColor(Color.white);
+         _botColorChanger.SetColor(Color.white);
 
-         GetComponent<BotScaler>().ScaleUp();
+         _botScaler.ScaleUp();
          
-         if (!GetComponent<BotTextHolder>().ShowText)
+         if (!_botTextHolder.ShowText)
          {
-            GetComponent<BotTextHolder>().TextEnable();
+            _botTextHolder.TextEnable();
          }
       }
       //Debug.Log("Movement is ended.");

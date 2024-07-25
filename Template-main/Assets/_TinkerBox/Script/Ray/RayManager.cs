@@ -16,9 +16,18 @@ public class RayManager : MonoBehaviour
     private BotAIDestinationSetter _botAIDestinationSetter;
     private BotScaler _botScaler;
     private BotColorChanger _botColorChanger;
+    private SliderProgressController _sliderProgressController;
 
     public GameObject TargetT;
     public FeedbackManager FManager;
+    private AudioManager _aManager;
+
+    private void Start()
+    {
+        _sliderProgressController = FindObjectOfType<SliderProgressController>();
+        _aManager = FindObjectOfType<AudioManager>();
+    }
+
     public GameObject Ray()
     {
         GameObject hitted = null;
@@ -46,6 +55,7 @@ public class RayManager : MonoBehaviour
 
     private void Update()
     {
+        if(_sliderProgressController.IsComplete) return;
         if(!BListBase.CanClickable) return;
         
         if (Input.GetMouseButtonDown(0))
@@ -68,6 +78,7 @@ public class RayManager : MonoBehaviour
             else
             {
                 //Debug.Log("BOT CANT SİT!");
+                _aManager.PlayFalseSound();
                 _botColorChanger.RedFlash();
             }
             

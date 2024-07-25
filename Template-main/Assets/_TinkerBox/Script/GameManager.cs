@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public void SuccesLoadLevel()
     {
         var current = GetSavedKey() + 1;
-        if (current >= TotalLevelCount) current = 1;
+        if (current >= TotalLevelCount) current = 2;
         SaveLevelKey(current);
         LoadScene(current);
     }
@@ -44,8 +44,8 @@ public class GameManager : MonoBehaviour
         var count = GetSavedKey();
         if (count == 0)
         {
-            count = 1;
-            SaveLevelKey(1);
+            count = 2;
+            SaveLevelKey(2);
         }
         LoadScene(count);
     }

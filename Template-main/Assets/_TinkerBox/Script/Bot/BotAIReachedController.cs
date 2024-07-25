@@ -19,6 +19,7 @@ public class BotAIReachedController : MonoBehaviour
     public UnityEvent EndOfPlayerPath;
 
     public bool IsClearState = false;
+    private AudioManager _aManager;
     
     void OnTargetReached () {
        /* if ( Vector3.Distance(tr.position, lastTarget) > 1f) {
@@ -39,7 +40,8 @@ public class BotAIReachedController : MonoBehaviour
                 Quaternion lookRot = Quaternion.LookRotation(dir);
                 lookRot.x = 0; lookRot.z = 0;
                 transform.rotation = lookRot;
-                
+                _aManager.PlaySitSound();
+
                 
                 _botAIDestinationSetter.target = null;
                 if(!IsClearState)EndOfPlayerPath.Invoke();
@@ -68,6 +70,7 @@ public class BotAIReachedController : MonoBehaviour
         _botAnimatorController = GetComponent<BotAnimatorController>();
          _botAIDestinationSetter = GetComponent<BotAIDestinationSetter>();
          _textInstantor = GetComponent<TextInstantor>();
+         _aManager = FindObjectOfType<AudioManager>();
     }
 
     

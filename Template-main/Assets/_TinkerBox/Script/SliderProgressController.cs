@@ -13,6 +13,8 @@ public class SliderProgressController : MonoBehaviour
     private float currentSliderValue;
     public TextMeshProUGUI SliderGoalText;
     public RectTransform MaskRect;
+    public bool IsComplete = false;
+    private AudioManager _aManager;
 
     public LevelStatusControllerCanvas ControllerCanvas;
 
@@ -22,7 +24,7 @@ public class SliderProgressController : MonoBehaviour
     {
         SetLevelText();
         SliderGoalText.text = "0/" + LevelGoal.ToString("0");
-
+        _aManager = FindObjectOfType<AudioManager>();
         MaskRect.DOAnchorPosX(400, 2.5f).SetEase(Ease.Linear).SetLoops(-2, LoopType.Restart).SetDelay(0.25f);
     }
 
@@ -60,9 +62,11 @@ public class SliderProgressController : MonoBehaviour
         Debug.LogError(a);
         if (a >= LevelGoal )
         {
+            _aManager.PlaySuccesSound();
             Debug.LogError("LEVEL UP PANEL ACTİVE");
             RaiseSavedLevel();
             ControllerCanvas.SuccesPanelActive();
+            IsComplete = true;
         }
 
     }

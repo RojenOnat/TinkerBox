@@ -71,6 +71,12 @@ public class TableCalculator : MonoBehaviour
             if (botHoldedValue < _tableTextHolder.CurrentHoldedValue) return true;
         }*/
 
+
+       if (_tableCapaticyHolder.IsLastChair())
+       {
+           if (botHoldedValue != _tableTextHolder.CurrentHoldedValue) return false;
+       }
+      
        if (botHoldedValue <= _tableTextHolder.CurrentHoldedValue) return true;
        
         return false;
