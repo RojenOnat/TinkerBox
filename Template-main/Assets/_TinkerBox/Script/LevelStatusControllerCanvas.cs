@@ -15,13 +15,13 @@ public class LevelStatusControllerCanvas : MonoBehaviour
     public void SuccesPanelActive()
     {
         SuccesPanel.SetActive(true);
-        SuccesBG.DOFade(.5f, 0.1f).SetEase(Ease.Linear);
+        SuccesBG.DOFade(.75f, 0.1f).SetEase(Ease.Linear);
     }
 
     public void FailPanelActive()
     {
         FailPanel.SetActive(true);
-        FailBG.DOFade(.5f, .1f).SetEase(Ease.Linear);
+        FailBG.DOFade(.75f, .1f).SetEase(Ease.Linear);
     }
 
     public void SuccesOnClick()

@@ -16,15 +16,15 @@ public class RayManager : MonoBehaviour
     private BotAIDestinationSetter _botAIDestinationSetter;
     private BotScaler _botScaler;
     private BotColorChanger _botColorChanger;
-    private SliderProgressController _sliderProgressController;
 
     public GameObject TargetT;
     public FeedbackManager FManager;
+    private SliderProgressController _progressController;
     private AudioManager _aManager;
 
     private void Start()
     {
-        _sliderProgressController = FindObjectOfType<SliderProgressController>();
+        _progressController = FindObjectOfType<SliderProgressController>();
         _aManager = FindObjectOfType<AudioManager>();
     }
 
@@ -55,7 +55,8 @@ public class RayManager : MonoBehaviour
 
     private void Update()
     {
-        if(_sliderProgressController.IsComplete) return;
+        if(_progressController.IsSucces) return;
+        
         if(!BListBase.CanClickable) return;
         
         if (Input.GetMouseButtonDown(0))

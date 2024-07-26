@@ -13,12 +13,13 @@ public class SliderProgressController : MonoBehaviour
     private float currentSliderValue;
     public TextMeshProUGUI SliderGoalText;
     public RectTransform MaskRect;
-    public bool IsComplete = false;
-    private AudioManager _aManager;
 
     public LevelStatusControllerCanvas ControllerCanvas;
 
     public TextMeshProUGUI LevelTMP;
+
+    public bool IsSucces = false;
+    private AudioManager _aManager;
 
     private void Start()
     {
@@ -30,6 +31,7 @@ public class SliderProgressController : MonoBehaviour
 
     public void RaiseSlider(int value)
     {
+        if(SliderImage.fillAmount>=1)return;
         Debug.LogError(value);
         currentSliderValue += ((float)value / LevelGoal);
         //Debug.LogError(currentSliderValue);
@@ -63,10 +65,10 @@ public class SliderProgressController : MonoBehaviour
         if (a >= LevelGoal )
         {
             _aManager.PlaySuccesSound();
+            IsSucces = true;
             Debug.LogError("LEVEL UP PANEL ACTİVE");
             RaiseSavedLevel();
             ControllerCanvas.SuccesPanelActive();
-            IsComplete = true;
         }
 
     }

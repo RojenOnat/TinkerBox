@@ -52,7 +52,7 @@ public class BotTextHolder : TextBase
         if (a > PossibilityOfShowingText)
         {
             TextDisable();
-            GetComponent<BotColorChanger>().SetColor(Color.yellow);
+            GetComponent<BotColorChanger>().SetColor(Color.gray);
         }
         else
         {

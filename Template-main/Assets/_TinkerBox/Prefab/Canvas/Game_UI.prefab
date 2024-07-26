@@ -40184,7 +40184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -15, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 439.9, y: -168.69055}
+  m_AnchoredPosition: {x: 417.7, y: -168.69055}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &3973673942912247534
@@ -97125,6 +97125,7 @@ MonoBehaviour:
   MaskRect: {fileID: 6151283795397083529}
   ControllerCanvas: {fileID: 2260850747869088949}
   LevelTMP: {fileID: 4613309751733214414}
+  IsSucces: 0
 --- !u!1 &9188944506496903074
 GameObject:
   m_ObjectHideFlags: 0

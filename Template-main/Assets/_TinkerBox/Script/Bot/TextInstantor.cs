@@ -47,7 +47,6 @@ public class TextInstantor : MonoBehaviour
                 
             HoldedTextList[i].SetActive(true);
             var goTo = TableObject.transform.position + Vector3.down;
-           
             HoldedTextList[i].transform.DOJump(goTo, 2.5f, 0, 0.2f).SetDelay(0.075f*i).OnComplete(() =>
             {
                 TableObject.GetComponent<TableTextHolder>().DecreaseHoldedValue(1);
@@ -56,7 +55,6 @@ public class TextInstantor : MonoBehaviour
                 _fm.OnLightVibrate();
                 ASource.Play();
                 ASource.pitch += 0.03f;
-
             });
             
 

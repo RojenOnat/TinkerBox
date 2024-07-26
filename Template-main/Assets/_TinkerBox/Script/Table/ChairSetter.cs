@@ -26,10 +26,11 @@ public class ChairSetter : MonoBehaviour
     public void CreateNumber()
     {
         List<int> t = new List<int>();
-        var a = Random.Range(1, ChairList.Count);
+        var a = Random.Range(3, ChairList.Count);
+        //Debug.Log(a);
         for (int i = 0; i < a; i++)
         {
-            t.Add(Random.Range(1, 10));
+            t.Add(Random.Range(1, 8));
         }
         
         var sum = 0;
@@ -57,7 +58,7 @@ public class ChairSetter : MonoBehaviour
             CreateNumber();
         } else
         {
-            t.Add(Random.Range(1,10));
+            t.Add(Random.Range(1,9));
             t = ShuffleList(t);
          
             for (int i = 0; i < a+1; i++)

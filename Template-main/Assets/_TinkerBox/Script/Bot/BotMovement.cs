@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 using DG.Tweening;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 public class BotMovement : MonoBehaviour
@@ -15,12 +16,13 @@ public class BotMovement : MonoBehaviour
    private BotColorChanger _botColorChanger;
    private BotScaler _botScaler;
    private BotTextHolder _botTextHolder;
-
+   public AudioSource ASource;
    private void Start()
    {
       _botTextHolder = GetComponent<BotTextHolder>();
       _botScaler = GetComponent<BotScaler>();
       _botColorChanger = GetComponent<BotColorChanger>();
+      ASource.pitch += Random.Range(-0.2f, 0.2f);
    }
 
    private void Awake()
@@ -49,8 +51,8 @@ public class BotMovement : MonoBehaviour
 
       if (_botListBase.BotList[0].gameObject == gameObject)
       {
-         _botColorChanger.SetColor(Color.white);
-
+         //_botColorChanger.SetColor(Color.white);
+         ASource.Play();
          _botScaler.ScaleUp();
          
          if (!_botTextHolder.ShowText)

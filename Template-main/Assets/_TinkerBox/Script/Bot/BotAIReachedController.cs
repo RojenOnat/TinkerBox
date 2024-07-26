@@ -32,6 +32,7 @@ public class BotAIReachedController : MonoBehaviour
             if(!IsClearState)_botAnimatorController.SetWalkState(false);*/
            GetComponent<AIPath>().canMove = false;
            _botAIDestinationSetter.target = null;
+           _aManager.PlaySitSound();
             //Destroy(GetComponent<AIPath>());
             if (!IsClearState)
             {
@@ -40,8 +41,7 @@ public class BotAIReachedController : MonoBehaviour
                 Quaternion lookRot = Quaternion.LookRotation(dir);
                 lookRot.x = 0; lookRot.z = 0;
                 transform.rotation = lookRot;
-                _aManager.PlaySitSound();
-
+                
                 
                 _botAIDestinationSetter.target = null;
                 if(!IsClearState)EndOfPlayerPath.Invoke();

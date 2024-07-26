@@ -19,7 +19,7 @@ public class BotColorChanger : MonoBehaviour
 
     public void SetColor(Color c)
     {
-       // if(_changed) return;
+        //if(_changed) return;
         SMR.material.DOColor(c, 0.1f).SetEase(Ease.Linear);
         _changed = true;
     }

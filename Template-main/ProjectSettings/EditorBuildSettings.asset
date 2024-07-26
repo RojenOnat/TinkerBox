@@ -16,14 +16,20 @@ EditorBuildSettings:
     guid: 028ecab55d72d4e74ae19559a076d018
   - enabled: 1
     path: Assets/_TinkerBox/Scenes/2.unity
-    guid: ca68e11987c2a4f7392194239cb6ba90
+    guid: a42214b39791e4f4da9b4fe4ec758439
   - enabled: 1
     path: Assets/_TinkerBox/Scenes/3.unity
-    guid: a656aa9000c1245b4bdd2cd08c1ed78e
+    guid: 55052f88860c84a8c82c5e3ee2a9e5ad
   - enabled: 1
     path: Assets/_TinkerBox/Scenes/4.unity
-    guid: 3fe1ea43285c646e08c5aae2f12e6f0e
+    guid: 4f24b35d474b84aefa04bf1ccd5fe1ad
   - enabled: 1
     path: Assets/_TinkerBox/Scenes/5.unity
-    guid: 9616ce534ba74408ab7b569cda8d0995
+    guid: 973794bbac7e34ee7b2dab5a463f8088
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/6.unity
+    guid: d8d7adb2babaf4465a6bbf85fda43f97
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/7.unity
+    guid: 295f85efea7264d299cadc114a018ea0
   m_configObjects: {}

@@ -12,8 +12,8 @@ public class TableSuccesProcces : MonoBehaviour
     private TableCapaticyHolder _tableCapaticyHolder;
 
     public ParticleSystem TableCompletedPart;
-    private AudioManager _aManager;
     private FeedbackManager _fm;
+    private AudioManager _aManager;
     private void Start()
     {
         _tableTextHolder = GetComponent<TableTextHolder>();
