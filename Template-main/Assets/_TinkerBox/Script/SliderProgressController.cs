@@ -20,9 +20,11 @@ public class SliderProgressController : MonoBehaviour
 
     public bool IsSucces = false;
     private AudioManager _aManager;
+    private TimerController _timerController;
 
     private void Start()
     {
+        _timerController = FindObjectOfType<TimerController>();
         SetLevelText();
         SliderGoalText.text = "0/" + LevelGoal.ToString("0");
         _aManager = FindObjectOfType<AudioManager>();
@@ -31,6 +33,7 @@ public class SliderProgressController : MonoBehaviour
 
     public void RaiseSlider(int value)
     {
+        if(!_timerController.TimerOn) return;
         if(SliderImage.fillAmount>=1)return;
         Debug.LogError(value);
         currentSliderValue += ((float)value / LevelGoal);
