@@ -54,7 +54,7 @@ public class ReleaseButton : MonoBehaviour
 
         a.GetComponent<BotAIReachedController>().IsClearState = true;
         a.GetComponent<BotColorChanger>().SetColor(Color.red);
-        RaiseReleaseCount();
+        //RaiseReleaseCount();
     }
 
     public void ReleaseIt(List<GameObject> go)

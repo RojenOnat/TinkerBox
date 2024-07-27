@@ -17,12 +17,16 @@ public class BotMovement : MonoBehaviour
    private BotScaler _botScaler;
    private BotTextHolder _botTextHolder;
    public AudioSource ASource;
+   private BotTableMatchControl _matchControl;
+   private ReleaseButton _releaseButton;
    private void Start()
    {
       _botTextHolder = GetComponent<BotTextHolder>();
       _botScaler = GetComponent<BotScaler>();
       _botColorChanger = GetComponent<BotColorChanger>();
       ASource.pitch += Random.Range(-0.2f, 0.2f);
+      _matchControl = FindObjectOfType<BotTableMatchControl>();
+      _releaseButton = FindObjectOfType<ReleaseButton>();
    }
 
    private void Awake()
@@ -38,11 +42,11 @@ public class BotMovement : MonoBehaviour
       CanMove = false;
       
       _botAnimatorController.SetWalkState(true);
-      transform.DOMove(goTo, .15f).SetEase(Ease.Linear).OnComplete(() =>
-      {
-         OnReachedMovement();
-      });
+      
+      transform.DOMove(goTo, .1f).SetEase(Ease.Linear).OnComplete(OnReachedMovement);
    }
+
+ 
 
    public void OnReachedMovement()
    {
@@ -54,6 +58,9 @@ public class BotMovement : MonoBehaviour
          //_botColorChanger.SetColor(Color.white);
          ASource.Play();
          _botScaler.ScaleUp();
+
+        if(!_matchControl.IsMatched(_botTextHolder.HoldedValue)) _releaseButton.ReleaseIt();
+         
          
          if (!_botTextHolder.ShowText)
          {
