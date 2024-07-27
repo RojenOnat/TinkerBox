@@ -1,13 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BotColorChanger : MonoBehaviour
 {
     public SkinnedMeshRenderer SMR;
     private bool _canChange = true;
     private bool _changed = false;
+
+    public List<Color> CList;
+    private void Awake()
+    {
+        int a = Random.Range(0, CList.Count);
+        SetColor(CList[a]);
+    }
+
     public void RedFlash()
     {
         if(!_canChange) return;

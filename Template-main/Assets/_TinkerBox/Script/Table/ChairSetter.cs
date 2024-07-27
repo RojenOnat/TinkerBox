@@ -26,7 +26,7 @@ public class ChairSetter : MonoBehaviour
     public void CreateNumber()
     {
         List<int> t = new List<int>();
-        var a = Random.Range(3, ChairList.Count);
+        var a = Random.Range(2, ChairList.Count);
         //Debug.Log(a);
         for (int i = 0; i < a; i++)
         {

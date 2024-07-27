@@ -1462,7 +1462,7 @@ MonoBehaviour:
   strength: 0.5
   uniformLength: 1
   maxSegmentLength: 1.5
-  bezierTangentLength: 0.4
+  bezierTangentLength: 0.1
   offset: 0.2
   factor: 0.1
 --- !u!114 &6478589450866241769
@@ -1555,6 +1555,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SMR: {fileID: 571773799873060167}
+  CList:
+  - {r: 1, g: 0.67779547, b: 0.2216981, a: 0}
+  - {r: 0.11254397, g: 0.745283, b: 0, a: 0}
+  - {r: 0, g: 0.54835, b: 0.6415094, a: 0}
+  - {r: 0.8356185, g: 0.43169275, b: 0.8396226, a: 0}
+  - {r: 0.9847499, g: 1, b: 0, a: 0}
+  - {r: 0.8794735, g: 0.6004361, b: 0.9716981, a: 0}
+  - {r: 0.19339621, g: 1, b: 0.84558135, a: 0}
 --- !u!114 &1814973248130586261
 MonoBehaviour:
   m_ObjectHideFlags: 0

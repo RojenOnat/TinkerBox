@@ -21,9 +21,11 @@ public class RayManager : MonoBehaviour
     public FeedbackManager FManager;
     private SliderProgressController _progressController;
     private AudioManager _aManager;
+    private TimerController _timerController;
 
     private void Start()
     {
+        _timerController = FindObjectOfType<TimerController>();
         _progressController = FindObjectOfType<SliderProgressController>();
         _aManager = FindObjectOfType<AudioManager>();
     }
@@ -56,7 +58,7 @@ public class RayManager : MonoBehaviour
     private void Update()
     {
         if(_progressController.IsSucces) return;
-        
+        if(!_timerController.TimerOn) return;
         if(!BListBase.CanClickable) return;
         
         if (Input.GetMouseButtonDown(0))

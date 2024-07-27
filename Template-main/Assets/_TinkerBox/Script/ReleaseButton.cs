@@ -49,7 +49,7 @@ public class ReleaseButton : MonoBehaviour
         
         var a =BListBase.GetFirstBot();
         BListBase.BotList.Remove(a);
-        GameObject go = Instantiate(new GameObject(), new Vector3(0, 0, 10), Quaternion.identity);
+        GameObject go = Instantiate(new GameObject(), new Vector3(7, 0.5f, .5f), Quaternion.identity);
         a.GetComponent<BotAIDestinationSetter>().target = go.transform;
 
         a.GetComponent<BotAIReachedController>().IsClearState = true;
@@ -59,7 +59,7 @@ public class ReleaseButton : MonoBehaviour
 
     public void ReleaseIt(List<GameObject> go)
     {
-        GameObject go1 = Instantiate(new GameObject(), new Vector3(0, 0, 10), Quaternion.identity);
+        GameObject go1 = Instantiate(new GameObject(), new Vector3(7, 0.5f, .5f), Quaternion.identity);
         //AstarPath.active.Scan();
 
         for (int i = 0; i < go.Count; i++)
