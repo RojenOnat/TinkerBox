@@ -1456,13 +1456,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  smoothType: 1
+  smoothType: 3
   subdivisions: 2
-  iterations: 4
+  iterations: 2
   strength: 0.5
   uniformLength: 1
-  maxSegmentLength: 1.5
-  bezierTangentLength: 0.1
+  maxSegmentLength: 2
+  bezierTangentLength: 0.4
   offset: 0.2
   factor: 0.1
 --- !u!114 &6478589450866241769
@@ -1607,7 +1607,7 @@ MonoBehaviour:
   radius: 0.5
   height: 2
   canMove: 1
-  maxSpeed: 10
+  maxSpeed: 12
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -1618,14 +1618,14 @@ MonoBehaviour:
   orientation: 0
   enableRotation: 1
   autoRepath:
-    mode: 2
+    mode: 1
     period: 0.5
     sensitivity: 10
     maximumPeriod: 2
     visualizeSensitivity: 0
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
-  rotationSpeed: 360
+  rotationSpeed: 620
   slowdownDistance: 0.6
   pickNextWaypointDist: 2
   endReachedDistance: 0.2

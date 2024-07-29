@@ -1,9 +1,11 @@
 
+using System;
 using System.Collections.Generic;
 using _TinkerBox.Script.Base.Resizer;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ChairSetter : MonoBehaviour
 {
@@ -21,6 +23,14 @@ public class ChairSetter : MonoBehaviour
         _randomValueHolder = FindObjectOfType<RandomValueHolder>();
         
         CreateNumber();
+    }
+
+    private void Start()
+    {
+        if (ChairList.Count != _tableCapaticyHolder.TableCapacityList.Count)
+        {
+            Debug.LogError("Sandalye Sayısı ve Kapasite eşit değil");
+        }
     }
 
     public void CreateNumber()
@@ -58,7 +68,7 @@ public class ChairSetter : MonoBehaviour
             CreateNumber();
         } else
         {
-            t.Add(Random.Range(1,9));
+            t.Add(Random.Range(1,4));
             t = ShuffleList(t);
          
             for (int i = 0; i < a+1; i++)

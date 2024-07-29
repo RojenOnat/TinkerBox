@@ -19,6 +19,7 @@ public class BotMovement : MonoBehaviour
    public AudioSource ASource;
    private BotTableMatchControl _matchControl;
    private ReleaseButton _releaseButton;
+   
    private void Start()
    {
       _botTextHolder = GetComponent<BotTextHolder>();
@@ -27,6 +28,7 @@ public class BotMovement : MonoBehaviour
       ASource.pitch += Random.Range(-0.2f, 0.2f);
       _matchControl = FindObjectOfType<BotTableMatchControl>();
       _releaseButton = FindObjectOfType<ReleaseButton>();
+      
    }
 
    private void Awake()
@@ -59,14 +61,25 @@ public class BotMovement : MonoBehaviour
          ASource.Play();
          _botScaler.ScaleUp();
 
-        if(!_matchControl.IsMatched(_botTextHolder.HoldedValue)) _releaseButton.ReleaseIt();
+        // if(tt!=null) tt.HandActive();
          
          
          if (!_botTextHolder.ShowText)
          {
             _botTextHolder.TextEnable();
          }
+         
+         if(!_matchControl.IsMatched(_botTextHolder.HoldedValue)) _releaseButton.ReleaseIt();
+
       }
       //Debug.Log("Movement is ended.");
+   }
+
+   private void Update()
+   {
+      if (transform.position.x>=5f)
+      {
+         gameObject.SetActive(false);
+      }
    }
 }

@@ -13,11 +13,17 @@ public class TextInstantor : MonoBehaviour
     public GameObject TableObject;
     private FeedbackManager _fm;
     public AudioSource ASource;
+
+    private TutorialController _tt;
+    private BotListBase BLB;
+    private BotTableMatchControl BTMC;
     private void Start()
     {
         _botTextHolder = GetComponent<BotTextHolder>();
         _fm = FindObjectOfType<FeedbackManager>();
-
+        _tt = FindObjectOfType<TutorialController>();
+        BLB = FindObjectOfType<BotListBase>();
+        BTMC = FindObjectOfType<BotTableMatchControl>();
     }
 
     public void AddTableListThisBot()
@@ -47,7 +53,7 @@ public class TextInstantor : MonoBehaviour
                 
             HoldedTextList[i].SetActive(true);
             var goTo = TableObject.transform.position + Vector3.down;
-            HoldedTextList[i].transform.DOJump(goTo, 2.5f, 0, 0.2f).SetDelay(0.075f*i).OnComplete(() =>
+            HoldedTextList[i].transform.DOJump(goTo, 2.5f, 0, 0.15f).SetDelay(0.075f*i).OnComplete(() =>
             {
                 TableObject.GetComponent<TableTextHolder>().DecreaseHoldedValue(1);
                 _botTextHolder.DecreaseHoldedText(1);
@@ -57,7 +63,23 @@ public class TextInstantor : MonoBehaviour
                 ASource.pitch += 0.03f;
             });
             
-
+            
         }
+
+        if (_tt != null)
+        {
+            Invoke(nameof(Tuto),.65f);
+        }
+        Invoke(nameof(CheckList),.6f);
+    }
+
+    private void CheckList()
+    {
+        //BTMC.EveryTableIsLastChair(BLB.BotList[0].GetComponent<BotTextHolder>().HoldedValue);
+    }
+
+    private void Tuto()
+    {
+        _tt.HandActive();
     }
 }

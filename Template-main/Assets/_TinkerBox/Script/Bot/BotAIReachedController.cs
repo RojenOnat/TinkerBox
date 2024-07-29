@@ -45,7 +45,7 @@ public class BotAIReachedController : MonoBehaviour
                 
                 _botAIDestinationSetter.target = null;
                 if(!IsClearState)EndOfPlayerPath.Invoke();
-                Debug.Log("A* Movemend Ending!");
+               // Debug.Log("A* Movemend Ending!");
                 _botAnimatorController.SetWalkState(false);
                // transform.position = _botAIDestinationSetter.target.position;
              //  GetComponent<AIPath>().Teleport(  _botAIDestinationSetter.target.position,true);
@@ -53,7 +53,8 @@ public class BotAIReachedController : MonoBehaviour
             }
             else
             {
-                
+               // _botAnimatorController.SetWalkState(true);
+
                // Debug.LogError(Vector3.Distance(_botAIDestinationSetter.target.position, transform.position) + " " +_botAIDestinationSetter.target.name);
               // gameObject.SetActive(false);
             }

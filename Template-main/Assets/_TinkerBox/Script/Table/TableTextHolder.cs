@@ -66,7 +66,7 @@ public class TableTextHolder : TextBase
         {
             //Todo:puan ekle
             _sliderProgressController.RaiseSlider(_holdedPoint);
-            Debug.LogError("Table Done!");
+            //Debug.LogError("Table Done!");
             GetComponent<TableSuccesProcces>().OnSucces();
             _chairSetter.ChairScaler();
         }

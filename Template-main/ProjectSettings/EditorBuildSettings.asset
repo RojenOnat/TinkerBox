@@ -6,27 +6,72 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Elephant/elephant_scene.unity
+    path: Assets/_TinkerBox/Scenes/elephant_scene.unity
     guid: 47a686e3b898646ae802a7832a649176
   - enabled: 1
     path: Assets/_TinkerBox/Scenes/StartScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/_TinkerBox/Scenes/Tutorial.unity
+    guid: 28c2bc40cfce94f1babc8bc62e9c6eb7
+  - enabled: 1
     path: Assets/_TinkerBox/Scenes/1.unity
-    guid: 028ecab55d72d4e74ae19559a076d018
-  - enabled: 1
-    path: Assets/_TinkerBox/Scenes/2.unity
-    guid: fff7e1dbc72a34892b5d883d904631e6
-  - enabled: 1
-    path: Assets/_TinkerBox/Scenes/3.unity
-    guid: 4bc84bc23b22749d2b102d68a51b39d1
-  - enabled: 1
-    path: Assets/_TinkerBox/Scenes/4.unity
-    guid: 6b62ff9458131433e9f513c4bdd0d38a
-  - enabled: 1
-    path: Assets/_TinkerBox/Scenes/5.unity
     guid: 7fda0b63a667f44f18047a13583d1b6d
   - enabled: 1
+    path: Assets/_TinkerBox/Scenes/2.unity
+    guid: 5479702bbd7a8485d8536cc3a63ee179
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/3.unity
+    guid: dd5d8ff1b5a674a9e9e490a06e0d1823
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/4.unity
+    guid: 21e856a6c2a0c48d1a6e92aeb1b4b7df
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/5.unity
+    guid: 4d224de424f994ea8bd7877f5393b4e5
+  - enabled: 1
     path: Assets/_TinkerBox/Scenes/6.unity
-    guid: 0797909ef8961435b97d876fa7ee2fde
+    guid: 5a53b39b1c73f4b0fb9f2efdb3ca88ce
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/7.unity
+    guid: 71c304058a45e4073ac46b4dc7ff220f
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/8.unity
+    guid: 877432f88473f4cccaf1831778c4c767
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/9.unity
+    guid: 12132d1737e3742ec89f931ace4eefe0
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/10.unity
+    guid: 9c01038dc8af04297bac03da47f7cb01
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/11.unity
+    guid: 14551170bef9f46f296062a2cf20569e
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/12.unity
+    guid: 04af7ec68cec94239afc26e110490072
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/13.unity
+    guid: 947281e32eb53453091ce29588b55627
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/14.unity
+    guid: 376111f18535340e398fa109316fc219
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/15.unity
+    guid: 64fe45a4600004883ad0bd40cf1c2954
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/16.unity
+    guid: 7c7c7ee32f14c436a8d446d7cf9c393a
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/17.unity
+    guid: e5ed07caf283144a785dcaeefb82fa48
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/18.unity
+    guid: 50425c55aa7064ebcbfb9ff3f2c93607
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/19.unity
+    guid: 53d366a9a889644859e22e33a5215587
+  - enabled: 1
+    path: Assets/_TinkerBox/Scenes/20.unity
+    guid: 323bc3f5551e44d48b65577348a093f0
   m_configObjects: {}

@@ -61,14 +61,15 @@ public class ReleaseButton : MonoBehaviour
     {
         GameObject go1 = Instantiate(new GameObject(), new Vector3(7, 0.5f, .5f), Quaternion.identity);
         //AstarPath.active.Scan();
-
+        
         for (int i = 0; i < go.Count; i++)
         {
-
+        
            // go[i].AddComponent<AIPath>();
             //go[i].GetComponent<BotAIReachedController>().IsClearState = true;
 
             go[i].GetComponent<BotAIDestinationSetter>().enabled = false;
+            go[i].GetComponent<BotAnimatorController>().SetWalkState(true);
             //go[i].GetComponent<AIPath>().SearchPath();
 
             

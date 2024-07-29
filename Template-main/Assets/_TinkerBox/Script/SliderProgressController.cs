@@ -64,7 +64,7 @@ public class SliderProgressController : MonoBehaviour
     private void SliderValueController()
     {
         var a = currentSliderValue * LevelGoal;
-        Debug.LogError(a);
+        //Debug.LogError(a);
         if (a >= LevelGoal )
         {
             _aManager.PlaySuccesSound();

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -120,6 +121,16 @@ public class RandomValueHolder : MonoBehaviour
             
       }
         
+      
    }
-   
+
+   [Button]
+   public void FindChairSetter()
+   {
+      C.Clear();
+      foreach (var VARIABLE in FindObjectsOfType<ChairSetter>())
+      {
+         C.Add(VARIABLE);
+      }
+   }
 }
