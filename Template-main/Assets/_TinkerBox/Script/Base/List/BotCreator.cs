@@ -42,7 +42,9 @@ public class BotCreator : MonoBehaviour
         {
             GameObject go = Instantiate(_botPrefab, goTo, Quaternion.identity);
             _bListBase.BotList.Add(go);
-            go.GetComponent<BotTextHolder>().SetHoldedValue(_randomValueHolder.GetValue());
+            var a = _randomValueHolder.GetValue();
+            go.GetComponent<BotTextHolder>().SetHoldedValue(a);
+            go.GetComponent<BotColorChanger>().SetColorIndex(a);
 
             if(_bListBase.BotList.Count == 0) go.GetComponent<BotTextHolder>().TextEnable();
             else

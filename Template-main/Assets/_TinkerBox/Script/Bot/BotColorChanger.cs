@@ -14,8 +14,8 @@ public class BotColorChanger : MonoBehaviour
     public List<Color> CList;
     private void Awake()
     {
-        int a = Random.Range(0, CList.Count);
-        SetColor(CList[a]);
+        //int a = Random.Range(0, CList.Count);
+        //SetColor(CList[a]);
     }
 
     public void RedFlash()
@@ -25,6 +25,14 @@ public class BotColorChanger : MonoBehaviour
         
         SMR.material.DOColor(Color.red, 0.25f).SetEase(Ease.Linear).SetLoops(2, LoopType.Yoyo).
             OnComplete(OnColorFlashEnd);
+    }
+
+    public void SetColorIndex(int a)
+    {
+        for (int i = 0; i < CList.Count; i++)
+        {
+            if (a == i) SMR.material.color = CList[i];
+        }
     }
 
     public void SetColor(Color c)
