@@ -14,10 +14,21 @@ public class TimerController : MonoBehaviour
    public bool TimerOn = false;
    public GameObject RestartButton;
    public GameObject TapToStartPanel;
+
+   private float startM;
+   private float startS;
    
    private SliderProgressController _progressController;
    private LevelStatusControllerCanvas ControllerCanvas;
 
+   public double ClaculateTime()
+   {
+      var m = (startM*60) + startS;
+      var c = (Minute * 60) + second;
+      var total = (m - c) / 60;
+
+      return total;
+   }
    private void Start()
    {
       TimerTMP.text = Minute.ToString("00") + ":" + second.ToString("00");

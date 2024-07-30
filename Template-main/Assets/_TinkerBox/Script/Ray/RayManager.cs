@@ -22,6 +22,7 @@ public class RayManager : MonoBehaviour
     private SliderProgressController _progressController;
     private AudioManager _aManager;
     private TimerController _timerController;
+    private int clickCount;
 
     private void Start()
     {
@@ -55,6 +56,7 @@ public class RayManager : MonoBehaviour
         return hitted;
     }
 
+    public int GetClickCount() => clickCount;
     private void Update()
     {
         if(_progressController.IsSucces) return;
@@ -77,6 +79,7 @@ public class RayManager : MonoBehaviour
                 _tableTextHolder.SetCurrentHoldedValue(_currentBot.GetComponent<BotTextHolder>().HoldedValue);
                 _currentBot.GetComponent<TextInstantor>().TableObject = _tempTableCalculator.gameObject;
                 _botScaler.SetStartScale();
+                clickCount++;
             }
             else
             {

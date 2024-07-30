@@ -69,7 +69,7 @@ public class BotMovement : MonoBehaviour
             _botTextHolder.TextEnable();
          }
          
-         if(!_matchControl.IsMatched(_botTextHolder.HoldedValue)) _releaseButton.ReleaseIt();
+         //if(!_matchControl.IsMatched(_botTextHolder.HoldedValue)) _releaseButton.ReleaseIt();
 
       }
       //Debug.Log("Movement is ended.");

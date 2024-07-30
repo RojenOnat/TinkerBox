@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using ElephantSDK;
 public class GameManager : MonoBehaviour
 {
     public int TotalLevelCount;
@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
         var current = GetSavedKey() + 1;
         if (current >= TotalLevelCount) current = 3;
         SaveLevelKey(current);
+        int a = 000;
+        
         LoadScene(current);
     }
 
@@ -37,6 +39,7 @@ public class GameManager : MonoBehaviour
     public void FailLoadLevel()
     {
         var current = GetSavedKey();
+
         LoadScene(current);
     }
     public void InitLevel()
@@ -48,6 +51,8 @@ public class GameManager : MonoBehaviour
             SaveLevelKey(2);
         }
         LoadScene(count);
+        //Elephant.LevelStarted(count);
+
     }
 
     public void LoadScene(int index)

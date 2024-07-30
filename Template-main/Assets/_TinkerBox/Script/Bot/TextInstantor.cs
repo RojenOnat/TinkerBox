@@ -17,6 +17,8 @@ public class TextInstantor : MonoBehaviour
     private TutorialController _tt;
     private BotListBase BLB;
     private BotTableMatchControl BTMC;
+    private ReleaseButton _releaseButton;
+    
     private void Start()
     {
         _botTextHolder = GetComponent<BotTextHolder>();
@@ -24,6 +26,7 @@ public class TextInstantor : MonoBehaviour
         _tt = FindObjectOfType<TutorialController>();
         BLB = FindObjectOfType<BotListBase>();
         BTMC = FindObjectOfType<BotTableMatchControl>();
+        _releaseButton = FindObjectOfType<ReleaseButton>();
     }
 
     public void AddTableListThisBot()
@@ -66,20 +69,36 @@ public class TextInstantor : MonoBehaviour
             
         }
 
+        Invoke(nameof(CheckList),.6f);
+
         if (_tt != null)
         {
             Invoke(nameof(Tuto),.65f);
         }
-        Invoke(nameof(CheckList),.6f);
     }
 
     private void CheckList()
     {
         //BTMC.EveryTableIsLastChair(BLB.BotList[0].GetComponent<BotTextHolder>().HoldedValue);
+        BTMC.ControlLast();
+        BLB.check = true;
+        //StartCoroutine(goo());
     }
 
     private void Tuto()
     {
         _tt.HandActive();
     }
+
+    IEnumerator goo()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            BTMC.ControlLast();
+            if(!BTMC.IsMatched(_botTextHolder.HoldedValue)) _releaseButton.ReleaseIt();
+
+            yield return new WaitForSeconds(0.001f);
+        }
+    }
+    
 }

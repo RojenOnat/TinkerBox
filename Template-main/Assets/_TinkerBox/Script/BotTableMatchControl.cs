@@ -108,18 +108,18 @@ public class BotTableMatchControl : MonoBehaviour
             }
         }*/
 
-      if (f>0)
+    /*  if (f>0)
       {
           f -= Time.fixedDeltaTime;
       }
       else
       {
           f = 2.5f;
-      }
+      }*/
       
-      ControlLast();
-
-     
+      
+      //ControlLast();
+      
     }
 
     public void ControlLast()
@@ -138,10 +138,15 @@ public class BotTableMatchControl : MonoBehaviour
             }
             if(sum==TList.Count) _releaseButton.ReleaseIt();
         }*/
-        
-        if(Greatherthan() == (TList.Count-1)) _releaseButton.ReleaseIt();
+
+     for (int i = 0; i < 20; i++)
+     {
+         if(Greatherthan() == (TList.Count-1)) _releaseButton.ReleaseIt();
+
+     }
 
     }
+    
     
     public int GetFullTableCount()
     {

@@ -8,6 +8,15 @@ public class BotListBase : MonoBehaviour
     public List<GameObject> BotList;
 
     public bool CanClickable = false;
+    public bool check = false;
+    private BotTableMatchControl _btmc;
+    private ReleaseButton _releaseButton;
+
+    private void Start()
+    {
+        _btmc = FindObjectOfType<BotTableMatchControl>();
+        _releaseButton = FindObjectOfType<ReleaseButton>();
+    }
 
     public GameObject GetFirstBot()
     {
@@ -20,6 +29,21 @@ public class BotListBase : MonoBehaviour
         ClearNullBots();
 
         CanClickable = CheckClickable();
+
+        if (check)
+        {
+            if (BotList.Count>0)
+            {
+                if (!_btmc.IsMatched(BotList[0].GetComponent<BotTextHolder>().HoldedValue))
+                {
+                    _releaseButton.ReleaseIt();
+                }
+                else
+                {
+                    check = false;
+                }
+            }
+        }
     }
 
     private bool CheckClickable()
