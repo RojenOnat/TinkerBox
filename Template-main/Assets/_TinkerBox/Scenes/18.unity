@@ -8531,7 +8531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8273365242908244766, guid: b003b0e26d50a41568cc3ae2f2fb800f, type: 3}
       propertyPath: LevelGoal
-      value: 800
+      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -6058,6 +6058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BotList: []
   CanClickable: 0
+  check: 0
 --- !u!1001 &1879709168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6938,7 +6939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8273365242908244766, guid: b003b0e26d50a41568cc3ae2f2fb800f, type: 3}
       propertyPath: LevelGoal
-      value: 400
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

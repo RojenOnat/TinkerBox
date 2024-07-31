@@ -5487,6 +5487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BotList: []
   CanClickable: 0
+  check: 0
 --- !u!1001 &1879709168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6401,6 +6402,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 464311257}
     m_Modifications:
+    - target: {fileID: 3247260497626448971, guid: b003b0e26d50a41568cc3ae2f2fb800f, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5797593646853485260, guid: b003b0e26d50a41568cc3ae2f2fb800f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6491,7 +6496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8273365242908244766, guid: b003b0e26d50a41568cc3ae2f2fb800f, type: 3}
       propertyPath: LevelGoal
-      value: 150
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
