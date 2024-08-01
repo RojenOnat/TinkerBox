@@ -80,7 +80,12 @@ public class TextInstantor : MonoBehaviour
     private void CheckList()
     {
         //BTMC.EveryTableIsLastChair(BLB.BotList[0].GetComponent<BotTextHolder>().HoldedValue);
-        BTMC.ControlLast();
+        
+        for (int i = 0; i < 30; i++)
+        {
+            BTMC.ControlLast();
+        }
+        
         BLB.check = true;
         //StartCoroutine(goo());
     }

@@ -21,7 +21,10 @@ public class LevelStatusControllerCanvas : MonoBehaviour
     {
         _tc = FindObjectOfType<TimerController>();
         _rManager = FindObjectOfType<RayManager>();
-        Elephant.LevelStarted(PlayerPrefs.GetInt("_SavedLevel"));
+        
+        var c = PlayerPrefs.GetInt("_SavedLevel")-1;
+        Debug.LogError($"LEVEL STARTED: {c}");
+        Elephant.LevelStarted(c);
     }
 
     public void SuccesPanelActive()
@@ -38,31 +41,67 @@ public class LevelStatusControllerCanvas : MonoBehaviour
 
     public void SuccesOnClick()
     {
+        
+        var currentLevel = PlayerPrefs.GetInt("_SavedLevel")-1;
+
+        Debug.LogError($"LEVEL SUCCES: {currentLevel}");
+        
+        
+        
+        
+        
+        
+        //Debug.LogError($"TIME:{ _tc.ClaculateTime()}");
+        
+       
+        
+       // Debug.LogError(_rManager.GetClickCount());
+
+       var p = Params.New()
+           .Set("used_move_count", _rManager.GetClickCount())
+           .Set("time", _tc.ClaculateTime());
+       
+       /*Elephant.Event("level_completed", currentLevel,p);
+       Elephant.l*/
+
+        Elephant.LevelCompleted(currentLevel,p);
+
+        
         FindObjectOfType<GameManager>().SuccesLoadLevel();
-        
-        Elephant.LevelCompleted( PlayerPrefs.GetInt("_SavedLevel"));
-        
-        var a = Params.New();
-        a.Set("time", _tc.ClaculateTime());
-        
-        var b = Params.New();
-        a.Set("used_move_count", _rManager.GetClickCount());
-        
-        Elephant.LevelCompleted( PlayerPrefs.GetInt("_SavedLevel"),a);
-        Elephant.LevelCompleted( PlayerPrefs.GetInt("_SavedLevel"),b);
-        
-        
+
     }
 
     public void FailOnClick()
     {
+        var currentLevel = PlayerPrefs.GetInt("_SavedLevel") - 1;
+        
+        
+        var p = Params.New()
+            .Set("used_move_count", _rManager.GetClickCount())
+            .Set("time", _tc.ClaculateTime());
+       
+        //Elephant.Event("level_failed", currentLevel,p);
+        Elephant.LevelFailed(currentLevel,p);
+
+            
+        Debug.LogError($"FAILED: {currentLevel}");
         FindObjectOfType<GameManager>().FailLoadLevel();
-        Elephant.LevelFailed( PlayerPrefs.GetInt("_SavedLevel"));
 
     }
     
     public void RestartOnClick()
     {
+        var currentLevel = PlayerPrefs.GetInt("_SavedLevel") - 1;
+        
+        
+        var p = Params.New()
+            .Set("used_move_count", _rManager.GetClickCount())
+            .Set("time", _tc.ClaculateTime());
+       
+        //Elephant.Event("level_failed", currentLevel,p);
+        Elephant.LevelFailed(currentLevel,p);
+
+        
         FindObjectOfType<GameManager>().FailLoadLevel();
     }
 }

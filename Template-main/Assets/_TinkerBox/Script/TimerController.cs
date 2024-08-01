@@ -26,11 +26,15 @@ public class TimerController : MonoBehaviour
       var m = (startM*60) + startS;
       var c = (Minute * 60) + second;
       var total = (m - c) / 60;
-
+      
+      Debug.LogError($"minute : {m} , secc: {c} , total:{total}");
       return total;
    }
    private void Start()
    {
+      startM = Minute;
+      startS = second;
+      
       TimerTMP.text = Minute.ToString("00") + ":" + second.ToString("00");
 
       _progressController = FindObjectOfType<SliderProgressController>();

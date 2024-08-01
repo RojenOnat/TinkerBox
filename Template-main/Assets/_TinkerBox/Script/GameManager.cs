@@ -23,17 +23,17 @@ public class GameManager : MonoBehaviour
         var current = GetSavedKey() + 1;
         if (current >= TotalLevelCount) current = 3;
         SaveLevelKey(current);
-        int a = 000;
+        
         
         LoadScene(current);
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        /*if (Input.GetMouseButtonDown(1))
         {
             SuccesLoadLevel();
-        }
+        }*/
     }
 
     public void FailLoadLevel()
