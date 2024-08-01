@@ -55,7 +55,7 @@ public class LevelStatusControllerCanvas : MonoBehaviour
         
        
         
-       // Debug.LogError(_rManager.GetClickCount());
+       
 
        var p = Params.New()
            .Set("used_move_count", _rManager.GetClickCount())

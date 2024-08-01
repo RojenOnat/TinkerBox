@@ -21,7 +21,7 @@ public class TimerController : MonoBehaviour
    private SliderProgressController _progressController;
    private LevelStatusControllerCanvas ControllerCanvas;
 
-   public int ClaculateTime()
+   public double ClaculateTime()
    {
       var m = (startM*60) + startS;
       var c = (Minute * 60) + second;
