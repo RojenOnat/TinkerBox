@@ -21,11 +21,11 @@ public class TimerController : MonoBehaviour
    private SliderProgressController _progressController;
    private LevelStatusControllerCanvas ControllerCanvas;
 
-   public double ClaculateTime()
+   public int ClaculateTime()
    {
       var m = (startM*60) + startS;
       var c = (Minute * 60) + second;
-      var total = (m - c) / 60;
+      var total = (m - c);
       
       Debug.LogError($"minute : {m} , secc: {c} , total:{total}");
       return total;
