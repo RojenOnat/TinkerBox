@@ -3437,16 +3437,28 @@ PrefabInstance:
       value: Kitchen
       objectReference: {fileID: 0}
     - target: {fileID: 5272151217022639847, guid: da54b99da051ea7489a84cc35e5b871f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.31204155
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272151217022639847, guid: da54b99da051ea7489a84cc35e5b871f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.31204155
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272151217022639847, guid: da54b99da051ea7489a84cc35e5b871f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.31204155
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272151217022639847, guid: da54b99da051ea7489a84cc35e5b871f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.25308722
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 5272151217022639847, guid: da54b99da051ea7489a84cc35e5b871f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.05
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 5272151217022639847, guid: da54b99da051ea7489a84cc35e5b871f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.891846
+      value: 5.37
       objectReference: {fileID: 0}
     - target: {fileID: 5272151217022639847, guid: da54b99da051ea7489a84cc35e5b871f, type: 3}
       propertyPath: m_LocalRotation.w
